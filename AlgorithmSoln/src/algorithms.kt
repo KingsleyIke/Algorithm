@@ -3,16 +3,34 @@
  */
 
 fun main(){
-
     }
 
 /**
  * Strange Counter
  */
 
-fun strangeCounter(t: Long): Long {
-    // Write your code here
-    
+//fun strangeCounter(t: Long): Long {
+//    // Write your code here
+//
+//}
+
+
+/**
+ * Leet Code
+ * Binary Search
+ */
+
+fun search(nums: IntArray, target: Int): Int {
+
+    var result: Int = -1
+
+    for (i in nums.indices) {
+        if (nums[i] == target) {
+            result = i
+        }
+    }
+
+    return result
 }
 
 
