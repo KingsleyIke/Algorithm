@@ -3,16 +3,28 @@
  */
 
 fun main(){
+    gradingStudents(arrayOf(73,67,38,33))
     }
 
 /**
- * Strange Counter
+ * Grading Students
  */
 
-//fun strangeCounter(t: Long): Long {
-//    // Write your code here
-//
-//}
+fun gradingStudents(grades: Array<Int>): Array<Int> {
+    // Write your code here
+    var finalGrade: MutableList<Int> = ArrayList()
+
+    grades.forEach() { i ->
+        if (i >= 38 && i % 5 > 2) {
+            val total = i + (5 - i % 5)
+            finalGrade.add(total)
+        } else {
+            finalGrade.add(i)
+        }
+    }
+    return finalGrade.toTypedArray()
+
+}
 
 
 /**
