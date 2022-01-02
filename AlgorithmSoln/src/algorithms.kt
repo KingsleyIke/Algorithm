@@ -3,8 +3,29 @@
  */
 
 fun main(){
-    gradingStudents(arrayOf(73,67,38,33))
+
+    countApplesAndOranges(7,10, 4, 12, arrayOf(2,3,-4),arrayOf(3,-2,-4) )
+
     }
+
+/**
+ * Apples and oranges
+ */
+fun countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: Array<Int>, oranges: Array<Int>): Unit {
+    var d = 0
+    var p = 0
+    for (i in apples) {
+        if ((a + i) in  s..t)
+            d++
+    }
+
+    for (j in oranges) {
+        if(b + j in s..t)
+            p++
+    }
+    println(d)
+    println(p)
+}
 
 /**
  * Grading Students
