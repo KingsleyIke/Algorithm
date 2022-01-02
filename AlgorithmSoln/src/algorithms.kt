@@ -9,6 +9,39 @@ fun main(){
     }
 
 /**
+ * Betweeen two sets
+ */
+
+fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
+    // Write your code here
+    var total = 0
+    for (num in 1..100) {
+        var inrange = true
+        for (i in 0 until b.size) {
+            val it = b[i]
+            if (it % num != 0) {
+                inrange = false
+                break
+            }
+        }
+        if (inrange) {
+            for (i in 0 until a.size) {
+                val it = a[i]
+                if (num % it != 0) {
+                    inrange = false
+                    break
+                }
+            }
+        }
+        if (inrange) {
+            total++
+        }
+    }
+    return total
+}
+
+
+/**
  * Kangaroo
  */
 
