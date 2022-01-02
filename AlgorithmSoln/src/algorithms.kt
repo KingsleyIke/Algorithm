@@ -9,6 +9,25 @@ fun main(){
     }
 
 /**
+ * Kangaroo
+ */
+
+fun kangaroo(x1: Int, v1: Int, x2: Int, v2: Int): String {
+
+    var n = 0
+
+    while( n < 10000) {
+
+        if (x1 + n * v1 == x2 + n * v2) {
+            return "YES"
+        } else
+            n++
+    }
+    return "NO"
+}
+
+
+/**
  * Apples and oranges
  */
 fun countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: Array<Int>, oranges: Array<Int>): Unit {
