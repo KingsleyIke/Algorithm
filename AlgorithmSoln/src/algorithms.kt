@@ -6,6 +6,24 @@ fun main(){
 
 
     }
+
+/**
+ * Sub Array division
+ */
+
+fun birthday(s: Array<Int>, d: Int, m: Int): Int {
+
+    var sum = 0
+    var r = 0
+    for (i in 0 until s.size) {
+        sum += s[i]
+        // M is never less than 1
+        if (i > m - 1) sum -= s[i - m]
+        if (i >= m - 1 && sum == d) r++
+    }
+    return r
+}
+
 /**
  * Breaking the record
  */
