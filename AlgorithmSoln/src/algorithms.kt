@@ -4,9 +4,38 @@
 
 fun main(){
 
-    countApplesAndOranges(7,10, 4, 12, arrayOf(2,3,-4),arrayOf(3,-2,-4) )
 
     }
+/**
+ * Breaking the record
+ */
+
+fun breakingRecords(scores: Array<Int>): Array<Int> {
+    var numOfMax = 0
+    var numOfMin = 0
+    var maxNum = 0
+    var minNum = 0
+
+    for (i in 0 until scores.size) {
+        val currentNum = scores[i]
+        if (i != 0) {
+            if (currentNum > maxNum) {
+                maxNum = currentNum
+                numOfMax++
+            } else if (currentNum < minNum) {
+                minNum = currentNum
+                numOfMin++
+            }
+        } else {
+            maxNum = currentNum
+            minNum = currentNum
+        }
+    }
+
+    return arrayOf(numOfMax, numOfMin)
+
+}
+
 
 /**
  * Betweeen two sets
