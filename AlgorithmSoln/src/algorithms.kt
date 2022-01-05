@@ -8,6 +8,21 @@ fun main(){
     }
 
 /**
+ * Divisible sum pairs
+ */
+
+fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
+    var count = 0
+    for (i in 0 until ar.size) {
+        for (j in 0 until ar.size) {
+            if (i < j && (ar[i] + ar[j])% k == 0)
+                count ++
+        }
+    }
+    return count
+
+
+/**
  * Sub Array division
  */
 
