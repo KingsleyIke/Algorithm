@@ -8,6 +8,30 @@ fun main(){
     }
 
 /**
+ * Migratory Birds
+ */
+
+fun migratoryBirds(arr: Array<Int>): Int? {
+    //var n: Int
+    var n = 0
+    var max = 0
+    var freq = 0
+    val numId = IntArray(n)
+
+    for (i in 0 until n) {
+        numId[arr[i]]++
+    }
+
+    for (i in 0 until n) {
+        if (numId[i] > max) {
+            max = numId[i]
+            freq = i
+        }
+    }
+    return freq
+}
+
+/**
  * Divisible sum pairs
  */
 
