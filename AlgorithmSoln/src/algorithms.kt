@@ -4,6 +4,7 @@
 
 fun main(){
 
+    migratoryBirds(arrayOf(1,1,2,2,3))
 
     }
 
@@ -18,7 +19,7 @@ fun migratoryBirds(arr: Array<Int>): Int? {
     var freq = 0
     val numId = IntArray(n)
 
-    for (i in 0 until n) {
+    for (i in 0 until arr.size) {
         numId[arr[i]]++
     }
 
@@ -28,6 +29,7 @@ fun migratoryBirds(arr: Array<Int>): Int? {
             freq = i
         }
     }
+    println(freq)
     return freq
 }
 
@@ -39,12 +41,12 @@ fun divisibleSumPairs(n: Int, k: Int, ar: Array<Int>): Int {
     var count = 0
     for (i in 0 until ar.size) {
         for (j in 0 until ar.size) {
-            if (i < j && (ar[i] + ar[j])% k == 0)
-                count ++
+            if (i < j && (ar[i] + ar[j]) % k == 0)
+                count++
         }
     }
     return count
-
+}
 
 /**
  * Sub Array division
