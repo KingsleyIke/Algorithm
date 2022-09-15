@@ -14,7 +14,7 @@ fun main(){
 
 fun migratoryBirds(arr: Array<Int>): Int? {
     //var n: Int
-    var n = 0
+    var n = 01
     var max = 0
     var freq = 0
     val numId = IntArray(n)
