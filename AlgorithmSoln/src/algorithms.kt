@@ -4,9 +4,32 @@
 
 fun main(){
 
-    migratoryBirds(arrayOf(1,1,2,2,3))
+    designerPdfViewer(arrayOf(1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5,5,5,5,5,5,5,5,5,7), "zaba")
 
     }
+
+/**
+ * Design PDF
+ */
+
+fun designerPdfViewer(h: Array<Int>, word: String): Int {
+    // Write your code here
+    var hn = 0
+    var charInt: Int
+
+
+    for (i in 0 until word.length) {
+
+         charInt = word[i].code - 97
+
+
+        if(h[charInt] > hn) {
+            hn = h[charInt]
+        }
+    }
+
+    return hn * word.length
+}
 
 /**
  * Migratory Birds
@@ -14,7 +37,7 @@ fun main(){
 
 fun migratoryBirds(arr: Array<Int>): Int? {
     //var n: Int
-    var n = 00
+    var n = 0
     var max = 0
     var freq = 0
     val numId = IntArray(n)
