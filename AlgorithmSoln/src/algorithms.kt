@@ -4,9 +4,25 @@
 
 fun main(){
 
-    designerPdfViewer(arrayOf(1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5,5,5,5,5,5,5,5,5,7), "zaba")
+    println(utopiantree(4))
 
     }
+
+/**
+ * Utopian Tree
+ */
+
+fun utopiantree(n: Int): Int {
+
+    var length = 1
+
+    for (period in 1..n) {
+        if (period.rem(2) != 0) length *= 2 else length++
+    }
+
+    return length
+
+}
 
 /**
  * Design PDF
